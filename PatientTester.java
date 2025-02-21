@@ -16,12 +16,13 @@ public class PatientTester {
         hopital.caffieneAbsorption();
         hopital.caffieneAbsorption();
         System.out.printf(hopital.toString());
-        for (int i = 0; i < hopital.patients.length; i++){
-            if (hopital.patients[i] != null){
-            if (hopital.patients[i].caffiene >= temp.caffiene){
-                temp = hopital.patients[i];
-                temp2 = i;
-            }}
+        for (int i = 0; i < hopital.patients.size(); i++){
+            if (hopital.patients.get(i) != null){
+                if (hopital.patients.get(i).caffiene >= temp.caffiene){
+                    temp = hopital.patients.get(i);
+                    temp2 = i;
+                }
+            }
         }
         hopital.unoccupy(temp2);
         System.out.printf(hopital.toString());
